@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #anim-1 {
+            width: 200px;
+            height: 500px;
+            animation-iteration-count: infinite;
+            animation-duration: 4s;
+            animation-name: car_drives;
+            animation-direction: alternate;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes car_drives {
+            from {
+                left: -200px;
+                animation-timing-function: linear;
+
+            }
+
+            to {
+                left: calc(100% - 250px);
+            }
+        }
+
+        div {
+            position: absolute;
+        }
+
+        .wheels {
+            position: absolute;
+            border: 1px solid green;
+            height: 55px;
+            width: 55px;
+            top: 220px;
+        }
+
+        .wheel {
+            position: absolute;
+            background-color: black;
+            width: 50px;
+            height: 50px;
+            border-radius: 100%;
+        }
+
+        .wheel_1 {
+            left: 50px;
+        }
+
+        .wheel_2 {
+            left: 150px;
+        }
+
+        .drova_i_kuzov {
+            position: relative;
+            top: 50px;
+        }
+        .woods {
+            width: 150px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            position: relative;
+        }
+
+        .woods>div {
+            position: relative;
+            width: 10px;
+            height: 150px;
+            background-color: rgb(240, 133, 12);
+        }
+
+        .kuzov {
+            position: absolute;
+            background-color: brown;
+            width: 150px;
+            height: 120px;
+            top: 60px;
+        }
+        
+
+        .cabin {
+            background-color: grey;
+            width: 50px;
+            height: 100px;
+            position: absolute;
+            top: 130px;
+            left: 150px;
+        }
+
+        .window {
+            position: absolute;
+            background-color: aqua;
+            width: 30px;
+            height: 30px;
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="anim-1">
+    <div class="drova_i_kuzov">
+        <div class="woods">
+            <div class="wood_1"></div>
+            <div class="wood_2"></div>
+            <div class="wood_3"></div>
+            <div class="wood_4"></div>
+            <div class="wood_5"></div>
+            <div class="wood_6"></div>
+            <div class="wood_7"></div>
+        </div>
+        <div class="kuzov">
+
+        </div>
+    </div>
+    <div class="wheels">
+        <div class="wheel wheel_1"></div>
+        <div class="wheel wheel_2"></div>
+    </div>
+
+    <div class="cabin">
+        <div class="window"></div>
+    </div>
+</div>
+</body>
+</html>
